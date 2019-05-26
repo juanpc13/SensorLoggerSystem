@@ -1,7 +1,7 @@
-#Protipo 2
-##Este es el segundo protipo de mis horas sociales.
+# Protipo 2
+Este es el segundo protipo de mis horas sociales.
 
-#El objetivo principal es la recoleccion de los siguientes datos:
+## El objetivo principal es la recoleccion de los siguientes datos:
 1-Dioxido de carbono Co2 (Principal)
 2-Higrogeno H
 3-Radon lectura por Camara
@@ -9,13 +9,13 @@
 Y guardarlos en una base de datos Postgres 9.6 alpine con docker.
 Tambien cumplir con la funcion de exponer los datos por medio de la web usando php con docker.
 
-#Componentes
-1-Raspberry Pi 3 Model B
-2-Camara USB
-3-Arduino ProMini 5V 16MHz
-4-Otros componentes comunes
+## Componentes
+1. Raspberry Pi 3 Model B
+2. Camara USB
+3. Arduino ProMini 5V 16MHz
+4. Otros componentes comunes
 
-#Como recolectar los datos
+## ¿Como recolectar los datos?
 Para lograr las lecturas de Dioxido de carbono e Higrogeno se utilizaran entradas analogas del
 Arduino ProMini que seran enviadas por I2C atraves de Python
 
@@ -25,11 +25,12 @@ en la captura de la camara, se utilizaran filtros de blanco y negro
 Todos registro de datos se guardaran cada minuto en la base de datos
 (Lo ideal seria guardar los datos si se detecta radon)
 
-#Como exponer los datos
+## ¿Como exponer los datos?
 Los datos se mostraran en el puerto 80 con la ip definida, aun estaran pendientes cuestiones de
 seguridad del servidor con php
 
-#Software
+## Software
+```
 apt install python3-pip
 pip install opencv-python
-
+```
