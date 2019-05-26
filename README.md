@@ -2,9 +2,11 @@
 Este es el segundo protipo de mis horas sociales.
 
 ## El objetivo principal es la recoleccion de los siguientes datos:
-1-Dioxido de carbono Co2 (Principal)
-2-Higrogeno H
-3-Radon lectura por Camara
+```
+1. Dioxido de carbono Co2 (Principal)
+2. Higrogeno H
+3. Radon lectura por Camara
+```
 
 Y guardarlos en una base de datos Postgres 9.6 alpine con docker.
 Tambien cumplir con la funcion de exponer los datos por medio de la web usando php con docker.
