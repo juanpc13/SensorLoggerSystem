@@ -1,0 +1,28 @@
+version: '3'
+services:
+
+  postgres:
+    build: ./postgres
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: protipo2
+
+  python:
+    build: ./python
+    devices:
+      - /dev/video0:/dev/video0
+    depends_on:
+      - postgres
+
+  php-apache:
+    image: php:7-apache
+    volumes: 
+      - ./php-apache/www/:/var/www/html
+    ports:
+      - 80:80
+    depends_on:
+      - postgres
