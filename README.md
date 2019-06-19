@@ -4,8 +4,7 @@ Este es el segundo protipo de mis horas sociales.
 ## El objetivo principal es la recoleccion de los siguientes datos:
 ```
 1. Dioxido de carbono Co2 (Principal)
-2. Higrogeno H
-3. Radon lectura por Camara
+2. Radon lectura por Camara
 ```
 
 Y guardarlos en una base de datos Postgres 9.6 alpine con docker.
@@ -14,12 +13,13 @@ Tambien cumplir con la funcion de exponer los datos por medio de la web usando p
 ## Componentes
 1. Raspberry Pi 3 Model B
 2. Camara USB
-3. Arduino ProMini 5V 16MHz
+3. ADS115 I2C
+4. Accelerometer Salidas Analogas
 4. Otros componentes comunes
 
 ## ¿Como recolectar los datos?
-Para lograr las lecturas de Dioxido de carbono e Higrogeno se utilizaran entradas analogas del
-Arduino ProMini que seran enviadas por I2C atraves de Python
+Para lograr las lecturas de Dioxido de carbono y accelerometer se utilizaran entradas analogas del
+ADS115 que seran enviadas por I2C atraves de Python
 
 Para obtener lecturas de Radon utilizaremos Python para determinar los pixeles que estan activos
 en la captura de la camara, se utilizaran filtros de blanco y negro
